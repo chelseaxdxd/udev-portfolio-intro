@@ -1,22 +1,108 @@
 <!DOCTYPE html>
+<style type="text/css">
+* {
+  box-sizing: border-box;
+  text-align: center;
+  font-family: 'Courier New';
+  font-size: 20pt;
+  background-color: #3F3F3E;
+  font-co
+}
+body{
+	color: white;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3F3F3E;
+    font-family: 'Courier New';
+    font-size: 25pt;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 25px 50px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #111;
+}
+li.dropdown {
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 25px 70px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+h1 {
+	font-size: 40pt;
+}
+.button {
+	color: black;
+	background-color: white;
+}
+input{
+	color: black;
+	background-color: #B8B8B8;
+}
+textarea{
+	color: black;
+	background-color: #B8B8B8;
+}
+	
+</style>
 <html>
 <body>
-
-<h2>Contact me</h2>
-<p> phone</p>
-<p> email</p>
+<ul>
+    <li><a class="active" href="main.html">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </li>
+</ul>
+<h1>Contact me</h1>
 <form action="/action_page.php">
   <label for="name">your name:</label><br>
   <input type="text" id="name" name="name"><br>
-  <label for="title">email title:</label><br>
+  <label for="title">title:</label><br>
   <input type="text" id="title" name="title"><br>
   <label for="content">content:</label><br>
-  <textarea name="content" rows="10" cols="30">The cat was playing in the garden.</textarea>
+  <textarea name="content" rows="10" cols="30"></textarea>
   <!--<input type="submit" value="Submit">-->
-  <button type="button" onclick="alert('send successfully')">Submit</button>
+  <br>
+  <button class="button" type="button" onclick="alert('send successfully')">Submit</button>
 </form> 
 
-<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
 
 </body>
 </html>

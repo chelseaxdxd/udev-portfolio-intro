@@ -27,6 +27,7 @@ main {
 #profile-picture {
     border-radius: 50%;
     width: 150px;
+    margin-right: 50px;
 }
 
 footer {
